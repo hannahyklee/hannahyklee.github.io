@@ -8,7 +8,7 @@ Some research projects I was lucky enough to contribute to while at the Universi
 
 *Coming soon!*
 
-## Deepfake Detection
+<!-- ## Deepfake Detection
 
 ### Tug-of-War
 
@@ -18,4 +18,4 @@ Some research projects I was lucky enough to contribute to while at the Universi
 
 ### Undergraduate Thesis
 
-### Multimodal Data
+### Multimodal Data -->
