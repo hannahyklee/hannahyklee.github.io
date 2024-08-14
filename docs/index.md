@@ -25,3 +25,5 @@ In the recent past, I:
 ___
 <br>
 This site (attempts to) organize my notes, updates, and miscellaneous digital artifacts. It is very much a work in progress!
+
+*Last updated July 2024*
