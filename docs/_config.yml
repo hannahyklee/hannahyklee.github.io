@@ -34,8 +34,10 @@ plugins:
   - jekyll-feed
 
 header_pages:
-  - notes.md
+  - notes.md # "blog" - where travel notes should go, or reflections on school, etc. (more text)
+  - resume.md
   - research.md
+  - play.md # artwork - minimal text
 
 # Exclude from processing.
 # The following items will not be processed, by default.

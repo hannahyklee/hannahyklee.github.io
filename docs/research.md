@@ -6,16 +6,22 @@ permalink: /research/
 
 Some research projects I was lucky enough to contribute to while at the University of Washington and beyond:
 
-*Coming soon!*
+### Deepfake Detection
 
-<!-- ## Deepfake Detection
+In 2024, I worked at [TrueMedia.org](https://www.truemedia.org) as a researcher and engineer, first as part of work completed for my masters degree at UW and later as an intern. Our work focused on detecting fake media and I worked specifically on detecting fake images -- my masters thesis was *Identifying Modern Deepfakes: Bringing Fake Image Detection into the Wild*, advised by professor and founder of TrueMedia.org, Oren Etzioni.
 
-### Tug-of-War
+[The Tug-of-War Between Deepfake Generation and Detection](https://arxiv.org/abs/2407.06174).  
+**Hannah Lee**, Changyeon Lee, Kevin Farhat, Lin Qiu, Steve Geluso, Aerin Kim, Oren Etzioni.  
+*Data-centric Machine Learning Workshop at the 41st International Conference on Machine Learning*, Vienna, Austria, Jul. 2024.
 
-### Masters Thesis
+### Mobile Health Applications
 
-## Other
+In undergrad, I worked with the [UbiComp Lab](https://ubicomplab.cs.washington.edu) on developing mobile health applications. This culminated in my undergraduate thesis, *Determining Input Image Quality for Smartphone Detection of Anemia*, advised by Jason Hoffman and Prof. Shwetak Patel. Together, we focused on work surrounding using smartphones to detect anemia and to monitor central venous pressure, utilizing the smartphone camera.
 
-### Undergraduate Thesis
+### LLMs and Multimodal Models + Data
 
-### Multimodal Data -->
+I've also spent some time in the past looking into large models and datasets, including OpenFlamingo, LLaMA, and TinyLlama. 
+
+[MINT-1T: Scaling Open-Source Multimodal Data by 10x: A Multimodal Dataset with One Trillion Tokens](https://arxiv.org/abs/2406.11271).  
+Anas Awadalla, Le Xue, Oscar Lo, Manli Shu, **Hannah Lee**, Etash Kumar Guha, Matt Jordan, Sheng Shen, Mohamed Awadalla, Silvio Savarese, Caiming Xiong, Ran Xu, Yejin Choi, Ludwig Schmidt.  
+*NeurIPS 2024, Datasets and benchmarks track.*
