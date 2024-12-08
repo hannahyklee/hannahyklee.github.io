@@ -8,7 +8,7 @@ Some research projects I was lucky enough to contribute to while at the Universi
 
 ### Deepfake Detection
 
-In 2024, I worked at [TrueMedia.org](https://www.truemedia.org) as a researcher and engineer, first as part of work completed for my masters degree at UW and later as an intern. Our work focused on detecting fake media and I worked specifically on detecting fake images -- my masters thesis was *Identifying Modern Deepfakes: Bringing Fake Image Detection into the Wild*, advised by professor and founder of TrueMedia.org, Oren Etzioni.
+In 2024, I worked at [TrueMedia.org](https://www.truemedia.org) as a researcher and engineer, first as part of my masters degree at UW and then continuing on as an intern. Our work focused on detecting fake media, and I specifically worked on detecting fake images -- my masters thesis was *Identifying Modern Deepfakes: Bringing Fake Image Detection into the Wild*, advised by professor and founder of TrueMedia.org, Oren Etzioni.
 
 [The Tug-of-War Between Deepfake Generation and Detection](https://arxiv.org/abs/2407.06174).  
 **Hannah Lee**, Changyeon Lee, Kevin Farhat, Lin Qiu, Steve Geluso, Aerin Kim, Oren Etzioni.  
@@ -17,6 +17,10 @@ In 2024, I worked at [TrueMedia.org](https://www.truemedia.org) as a researcher 
 ### Mobile Health Applications
 
 In undergrad, I worked with the [UbiComp Lab](https://ubicomplab.cs.washington.edu) on developing mobile health applications. This culminated in my undergraduate thesis, *Determining Input Image Quality for Smartphone Detection of Anemia*, advised by Jason Hoffman and Prof. Shwetak Patel. Together, we focused on work surrounding using smartphones to detect anemia and to monitor central venous pressure, utilizing the smartphone camera.
+
+[Artificial intelligence-enabled non-invasive ubiquitous anemia screening: The HEMO-AI pilot study on pediatric population](https://journals.sagepub.com/doi/full/10.1177/20552076241297057).
+Daniel Gordon, Jason Hoffman, Keren Gamrasni, Yotam Barlev, Alex Levine, Tamar Landau, Ronen Shpiegel, Avishai Lahad, Ariel Koren, Carina Levin, Osnat Naor, **Hannah Lee**, Xin Liu, Shwetak Patel, Gilad Chayen, Michael Brandwein.
+*DIGITAL HEALTH*, 2024.
 
 ### LLMs and Multimodal Models + Data
 
