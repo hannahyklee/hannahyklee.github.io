@@ -21,7 +21,7 @@
 title: Hannah Lee
 email: 
 description: >- # this means to ignore newlines until "baseurl:"
-    Notes, updates, and miscellaneous digital belongings.
+    Notes, updates, and miscellaneous digital belongings. Last updated February 2025.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://hannahyklee.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
@@ -34,7 +34,7 @@ plugins:
   - jekyll-feed
 
 header_pages:
-  # - notes.md # "blog" - where travel notes should go, or reflections on school, etc. (more text)
+  - notes.md # "blog" - where travel notes should go, or reflections on school, etc. (more text)
   - research.md
   - resume.md
   - play.md # artwork - minimal text
