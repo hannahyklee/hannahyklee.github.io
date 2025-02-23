@@ -1,0 +1,72 @@
+/* Default (Desktop) layout */
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    margin: 10px;
+    max-width: 30vw;
+    max-height: 30vw;
+}
+
+/* Mobile layout (for screens smaller than 768px) */
+@media (max-width: 768px) {
+.image-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container img {
+    margin-top: 10px;
+    width: 100%;
+}
+}
+
+/* Popup Styling*/
+
+#imagePopup {
+    display: none;
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.8); 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 1000;
+}
+
+#popupContent {
+    position: relative; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    max-width: 90vw; 
+    max-height: 90vh;
+}
+
+#popupImage {
+    max-width: 80vw; 
+    max-height: 80vh;
+}
+
+#popupCaption {
+    color: rgb(232, 232, 232);
+    text-align: center;
+    margin: 10px;
+    font-size: small;
+    font-style: italic;
+}
+
+#closeButton {
+    position: absolute; 
+    top: 20px; 
+    right: 30px; 
+    color: white; 
+    font-size: 30px; 
+    cursor: pointer;
+}

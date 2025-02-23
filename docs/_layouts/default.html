@@ -12,18 +12,21 @@
         {{ content }}
 
           <!-- Popup Container -->
-        <div id="imagePopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center; z-index: 1000;">
-          <span onclick="closePopup()" style="position: absolute; top: 20px; right: 30px; color: white; font-size: 30px; cursor: pointer;">&times;</span>
-          <div id="popupContent" style="position: relative; display: flex; justify-content: center; align-items: center; max-width: 90vw; max-height: 90vh;">
+        <div id="imagePopup">
+          <span id="closeButton" onclick="closePopup()">&times;</span>
+          <div id="popupContent">
             <!-- Image -->
-            <img id="popupImage" style="max-width: 80vw; max-height: 80vh;">
+            <img id="popupImage"> 
+            <p id="popupCaption"></p>
           </div>
         </div>
+      </div>
 
         <script>
-          function openPopup(imageSrc) {
+          function openPopup(imageSrc, captionText) {
             document.getElementById("popupImage").src = imageSrc;
             document.getElementById("imagePopup").style.display = "flex";
+            document.getElementById("popupCaption").textContent = captionText;
           }
 
           function closePopup() {
@@ -41,7 +44,8 @@
           // Add event listener to all images to open popup on click
           document.querySelectorAll('img').forEach(function(img) {
             img.addEventListener('click', function() {
-              openPopup(this.src);
+              var caption = img.getAttribute('data-caption') || img.alt;
+              openPopup(this.src, caption);
             });
           });
         </script>
