@@ -23,14 +23,20 @@
       </div>
 
         <script>
+          let isPopupOpen = false;
           function openPopup(imageSrc, captionText) {
-            document.getElementById("popupImage").src = imageSrc;
-            document.getElementById("imagePopup").style.display = "flex";
-            document.getElementById("popupCaption").textContent = captionText;
+            if (!isPopupOpen) {
+              document.getElementById("popupImage").src = imageSrc;
+              document.getElementById("imagePopup").style.display = "flex";
+              document.getElementById("popupCaption").textContent = captionText;
+              isPopupOpen = true;
+            }
+            
           }
 
           function closePopup() {
             document.getElementById("imagePopup").style.display = "none";
+            isPopupOpen = false;
           }
 
           // Close only when clicking outside the popup content
