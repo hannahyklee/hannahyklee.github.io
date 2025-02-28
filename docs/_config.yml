@@ -34,7 +34,7 @@ plugins:
   - jekyll-feed
 
 header_pages:
-  - notes.md # "blog" - where travel notes should go, or reflections on school, etc. (more text)
+  - notes.md # "blog" posts
   - research.md
   - resume.md
   - play.md # artwork - minimal text
