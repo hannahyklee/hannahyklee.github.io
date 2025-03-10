@@ -46,10 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // Color scale - white to blue (global scale)
             const color = d3.scaleSequential()
                 .domain([0, maxMiles])  // Map your values from 0 to 1
-                .interpolator(t => d3.interpolateBlues(0.2 + t * 0.8));
-            // const color = d3.scaleSequential(d3.interpolateBlues)
-            //     .domain([0, maxMiles]);
-                
+                .interpolator(t => d3.interpolateBlues(0.15 + t * 0.85));
+
             // Add global legend at the top
             addLegend(svg, maxMiles, color, width, -legendHeight);
             
@@ -211,55 +209,50 @@ document.addEventListener('DOMContentLoaded', function() {
             .text(d => monthNames[d.getMonth()]);
     }
     
-    // Function to add the legend
     function addLegend(svg, maxMiles, colorScale, width, yOffset) {
-        const legendWidth = 200;
-        
-        const legend = svg.append('g')
+    const legendWidth = 200;
+    const legendHeight = 10;
+
+    const legend = svg.append('g')
             .attr('class', 'legend')
             .attr('transform', `translate(${(width - legendWidth)/2}, ${yOffset + 5})`); // Add 10px padding, Center the legend
-            
-        const legendScale = d3.scaleLinear()
-            .domain([0, maxMiles])
-            .range([0, legendWidth]);
-            
-        const legendAxis = d3.axisBottom(legendScale)
-            .ticks(5)
-            .tickSize(6);
-            
-        // Gradient for legend
-        const defs = svg.append('defs');
-        const gradient = defs.append('linearGradient')
-            .attr('id', 'gradient')
-            .attr('x1', '0%')
-            .attr('x2', '100%')
-            .attr('y1', '0%')
-            .attr('y2', '0%');
-            
+           
+    // Gradient definition
+    const defs = svg.append('defs');
+    const gradient = defs.append('linearGradient')
+        .attr('id', 'gradient')
+        .attr('x1', '0%').attr('x2', '100%')
+        .attr('y1', '0%').attr('y2', '0%');
+
+    d3.range(0, 1.1, 0.2).forEach(t => {
         gradient.append('stop')
-            .attr('offset', '0%')
-            .attr('stop-color', '#ebedf0');
-            
-        gradient.append('stop')
-            .attr('offset', '100%')
-            .attr('stop-color', colorScale(maxMiles));
-            
-        legend.append('rect')
-            .attr('width', legendWidth)
-            .attr('height', 10)
-            .style('fill', 'url(#gradient)');
-            
-        legend.append('g')
-            .attr('transform', 'translate(0, 10)')
-            .call(legendAxis)
-            .selectAll('text')
-            .style('font-size', '8px');
-            
-        legend.append('text')
-            .attr('x', legendWidth / 2)
-            .attr('y', -5)
-            .style('text-anchor', 'middle')
-            .style('font-size', '10px')
-            .text('Miles Run');
-    }
+            .attr('offset', `${t * 100}%`)
+            .attr('stop-color', colorScale(t * maxMiles));
+    });
+
+    // Legend bar
+    legend.append('rect')
+        .attr('width', legendWidth)
+        .attr('height', legendHeight)
+        .style('fill', 'url(#gradient)');
+
+    // Legend axis
+    const legendScale = d3.scaleLinear()
+        .domain([0, maxMiles])
+        .range([0, legendWidth]);
+
+    legend.append('g')
+        .attr('transform', `translate(0, ${legendHeight})`)
+        .call(d3.axisBottom(legendScale).ticks(5).tickSize(6))
+        .selectAll('text')
+        .style('font-size', '8px');
+
+    // Legend title
+    legend.append('text')
+        .attr('x', legendWidth / 2)
+        .attr('y', -5)
+        .attr('text-anchor', 'middle')
+        .style('font-size', '10px')
+        .text('Miles Run');
+}
 });
