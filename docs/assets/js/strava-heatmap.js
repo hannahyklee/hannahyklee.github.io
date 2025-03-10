@@ -44,8 +44,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const maxMiles = allMiles.length > 0 ? d3.max(allMiles) : 10;
             
             // Color scale - white to blue (global scale)
-            const color = d3.scaleSequential(d3.interpolatePurples)
-                .domain([0, maxMiles]);
+            const color = d3.scaleSequential()
+                .domain([0, maxMiles])  // Map your values from 0 to 1
+                .interpolator(t => d3.interpolateBlues(0.2 + t * 0.8));
+            // const color = d3.scaleSequential(d3.interpolateBlues)
+            //     .domain([0, maxMiles]);
                 
             // Add global legend at the top
             addLegend(svg, maxMiles, color, width, -legendHeight);
