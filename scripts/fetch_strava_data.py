@@ -10,7 +10,7 @@ CLIENT_ID = None
 CLIENT_SECRET = None
 REFRESH_TOKEN = None
 AUTH_CODE = None
-DATA_FILE = 'docs/assets/data/running_data.json'
+RUN_MILES_FILE = 'docs/assets/data/running_data.json'
 
 def initialize_globals():
     """
@@ -202,17 +202,17 @@ def process_activities(activities):
 def load_existing_data():
     # Load existing data if available
     try:
-        with open(DATA_FILE, 'r') as f:
+        with open(RUN_MILES_FILE, 'r') as f:
             return json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         return {}
 
-def save_data(data):
+def save_data(data, filename=RUN_MILES_FILE):
     # Ensure directory exists
-    os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
     
     # Save to JSON file
-    with open(DATA_FILE, 'w') as f:
+    with open(filename, 'w') as f:
         json.dump(data, f)
 
 def get_latest_activity_timestamp(data):
@@ -292,9 +292,12 @@ if __name__ == "__main__":
         pass  # Skip if running in GitHub Actions
     
     access_token = refresh_access_token()
-    
+
     generate_heatmap_data(
         start_date=args.start,
         end_date=args.end,
         incremental=args.incremental
     )
+
+    # data = fetch_activities(access_token)
+    # save_data(data, 'docs/assets/data/all_activities.json')
