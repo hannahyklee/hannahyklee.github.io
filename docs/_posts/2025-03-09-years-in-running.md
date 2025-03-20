@@ -10,7 +10,7 @@ Strava's Year in Sport is a fun way to see quick highlights about your training 
 --- 
 <br>
 
-There's a lot I could do with the data I've collected over the years. Here, I'm starting with my mileage stacked across 5 years, inspired in part by GitHub and an old [Wait But Why blog post](https://waitbutwhy.com/2014/05/life-weeks.html) that I remember from time to time. As of March 10, 2025, you can tell that 2024 was my biggest year of running yet; I took some time off at the end of 2023 when I was injured; I switched my long run day from Saturday (2022) to Sunday (2024). I'll keep updating this periodically as I keep running and I'm excited to see how 2025 stacks up.
+Inspired in part by GitHub and an old [Wait But Why blog post](https://waitbutwhy.com/2014/05/life-weeks.html) that I remember from time to time, here's the last five years of my running history. As of March 2025, you can tell that 2024 was my biggest year of running yet; I took some time off at the end of 2023 when I was injured; I switched my long run day from Saturday (2022) to Sunday (2024). I'll keep updating this periodically as I keep running and I'm excited to see how 2025 stacks up.
 
 <br>
 {% include running-heatmap.html %}
