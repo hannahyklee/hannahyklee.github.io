@@ -1,23 +1,40 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Config
-    const cellSize = 12;
-    const cellMargin = 2;
-    const width = 53 * (cellSize + cellMargin); // 53 weeks in a year
+    const isMobile = window.innerWidth < 768;
+
+    // Set different parameters based on device type
+    const weekCount = 53; // 53 weeks in a year
     const weekDays = 7;
-    const height = weekDays * (cellSize + cellMargin);
     const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const numYears = 5; // Number of years to display
     const legendHeight = 40; // Height reserved for legend
+
+    // For desktop: fit within 900px
+    // For mobile: use larger cells but allow horizontal scrolling
+    const maxDesiredWidth = isMobile ? 1200 : 900; // Larger for mobile to ensure cells are visible
+    const minCellSize = isMobile ? 8 : 6; // Ensure cells don't get too small on any device
+
+    // Calculate cell size based on desired max width
+    const availableWidthForCells = maxDesiredWidth - 40; // 40px for labels
+    const cellAndMarginWidth = availableWidthForCells / weekCount;
+    const cellSize = Math.max(Math.floor(cellAndMarginWidth - 2), minCellSize); // Ensure minimum cell size
+    const cellMargin = 2;
+
+    // Recalculate actual dimensions
+    const width = weekCount * (cellSize + cellMargin);
+    const height = weekDays * (cellSize + cellMargin);
 
     // Create SVG container for all years
     const svg = d3.select('#running-heatmap')
         .append('svg')
         .attr('width', width + 40) // Extra space for labels
         .attr('height', (height + 70) * numYears + legendHeight) // Add extra height for legend
+        .attr('viewBox', `0 0 ${width + 40} ${(height + 70) * numYears + legendHeight}`)
+        .attr('preserveAspectRatio', 'xMidYMid meet') // This helps with scaling
         .append('g')
         .attr('transform', `translate(30, ${legendHeight + 10})`); // Space for day labels and legend
-
+    
     // Fetch JSON data
     fetch(runningDataFile)
         .then(response => response.json())

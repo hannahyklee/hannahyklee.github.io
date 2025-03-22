@@ -24,59 +24,59 @@ def initialize_globals():
     AUTH_CODE = os.getenv('STRAVA_CODE')
 
 # One time use functions to get code with appropriate permissions
-# def get_authorization_url():
-#     """
-#     Returns the URL to redirect users to for authorization. Get CODE from URL and set environment variable
-#     to continue upon next call.
-#     """
-#     redirect_uri = os.environ.get('STRAVA_REDIRECT_URI', 'http://localhost')
-#     scope = "read,activity:read_all,profile:read_all"
+def get_authorization_url():
+    """
+    Returns the URL to redirect users to for authorization. Get CODE from URL and set environment variable
+    to continue upon next call.
+    """
+    redirect_uri = os.environ.get('STRAVA_REDIRECT_URI', 'http://localhost')
+    scope = "read,activity:read_all,profile:read_all"
     
-#     auth_url = (
-#         f"https://www.strava.com/oauth/authorize?"
-#         f"client_id={CLIENT_ID}&"
-#         f"redirect_uri={redirect_uri}&"
-#         f"response_type=code&"
-#         f"scope={scope}"
-#     )
+    auth_url = (
+        f"https://www.strava.com/oauth/authorize?"
+        f"client_id={CLIENT_ID}&"
+        f"redirect_uri={redirect_uri}&"
+        f"response_type=code&"
+        f"scope={scope}"
+    )
     
-#     return auth_url
+    return auth_url
 
 # One time use function to get appropriate tokens with scope
-# def exchange_code_for_tokens():
-#     """
-#     Exchange the authorization code for access and refresh tokens.
-#     Updates the refresh token in .env file.
-#     Returns both access_token and refresh_token.
-#     """
-#     token_url = "https://www.strava.com/oauth/token"
-#     payload = {
-#         'client_id': CLIENT_ID,
-#         'client_secret': CLIENT_SECRET,
-#         'code': AUTH_CODE,
-#         'grant_type': 'authorization_code'
-#     }
+def exchange_code_for_tokens():
+    """
+    Exchange the authorization code for access and refresh tokens.
+    Updates the refresh token in .env file.
+    Returns both access_token and refresh_token.
+    """
+    token_url = "https://www.strava.com/oauth/token"
+    payload = {
+        'client_id': CLIENT_ID,
+        'client_secret': CLIENT_SECRET,
+        'code': AUTH_CODE,
+        'grant_type': 'authorization_code'
+    }
     
-#     try:
-#         response = requests.post(token_url, data=payload, verify=False)
-#         response.raise_for_status()
+    try:
+        response = requests.post(token_url, data=payload, verify=False)
+        response.raise_for_status()
         
-#         data = response.json()
+        data = response.json()
         
-#         # Save the refresh token
-#         if "refresh_token" in data:
-#             update_env_file('STRAVA_REFRESH_TOKEN', data["refresh_token"])
+        # Save the refresh token
+        if "refresh_token" in data:
+            update_env_file('STRAVA_REFRESH_TOKEN', data["refresh_token"])
         
-#         return data
+        return data
     
-#     except requests.exceptions.RequestException as e:
-#         print(f"Error exchanging code for tokens: {e}")
-#         if hasattr(response, 'json'):
-#             try:
-#                 print(f"Response: {response.json()}")
-#             except:
-#                 print(f"Status code: {response.status_code}")
-#         return None
+    except requests.exceptions.RequestException as e:
+        print(f"Error exchanging code for tokens: {e}")
+        if hasattr(response, 'json'):
+            try:
+                print(f"Response: {response.json()}")
+            except:
+                print(f"Status code: {response.status_code}")
+        return None
 
 def update_env_file(key, value):
     """
@@ -228,6 +228,9 @@ def get_latest_activity_timestamp(data):
 
 def generate_heatmap_data(start_date=None, end_date=None, incremental=False):
     access_token = refresh_access_token()
+    if (not access_token):
+        print("Failed to refresh access token")
+        return
     
     # Load existing data
     existing_data = load_existing_data()
@@ -291,8 +294,6 @@ if __name__ == "__main__":
     except ImportError:
         pass  # Skip if running in GitHub Actions
     
-    access_token = refresh_access_token()
-
     generate_heatmap_data(
         start_date=args.start,
         end_date=args.end,

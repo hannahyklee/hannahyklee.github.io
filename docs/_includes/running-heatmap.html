@@ -1,8 +1,50 @@
 <!-- _includes/running-heatmap.html -->
 <div class="running-heatmap-container">
     <div id="running-heatmap"></div>
-  </div>
-  
+</div>
+
+<style>
+  .running-heatmap-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 0 auto;
+  }
+
+  #running-heatmap {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    margin: 0 auto;
+  }
+
+  /* Desktop sizing */
+  @media screen and (min-width: 768px) {
+    #running-heatmap {
+      max-width: 900px; /* Match desktop maxDesiredWidth */
+    }
+  }
+
+  /* Mobile sizing - make sure the SVG is big enough to be usable */
+  @media screen and (max-width: 767px) {
+    #running-heatmap {
+      min-width: min-content; /* Ensure content doesn't get squeezed */
+      justify-content: flex-start; /* Align to start for better scrolling experience */
+    }
+    
+    .running-heatmap-container {
+      overflow-x: scroll; /* Force scrolling on mobile */
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+  }
+
+  /* Make sure the SVG is responsive */
+  #running-heatmap svg {
+    max-width: 100%;
+    height: auto;
+}
+</style>
+
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script type="text/javascript">
     const runningDataFile = "{{ site.baseurl }}/assets/data/running_data.json";
