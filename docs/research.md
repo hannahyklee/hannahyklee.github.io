@@ -39,4 +39,4 @@ Anas Awadalla, Le Xue, Oscar Lo, Manli Shu, **Hannah Lee**, Etash Kumar Guha, Ma
 *NeurIPS 2024, Datasets and benchmarks track.*
 
 **[Scaling Hardness-Impact Training: Investigating Data Ordering With TinyLlama](https://gitlab.cs.washington.edu/sidlak/cse517-final-project) (course project).**   
-Finetuning leverages pre-trained language models to improve task-specific performance. We build on existing finetuning paradigms and investigate how data hardness affects the overall performance and efficiency of fine-tuning. [Poster Presentation](https://hannahyklee.github.io/assets/cse517-project.pdf).
+Finetuning leverages pre-trained language models to improve task-specific performance. We build on existing finetuning paradigms and investigate how data hardness affects the overall performance and efficiency of fine-tuning. [Poster Presentation]({{ site.baseurl }}/assets/cse517-poster.pdf).
