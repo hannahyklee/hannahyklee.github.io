@@ -7,14 +7,14 @@ categories: travel
 
 I've traveled to South Korea many times over the years. Despite having *been* in Seoul frequently, the total time I've spent in the city is still short of a year -- barely a few percentage points of my lifetime. Perhaps it's precisely this consistent dosage of short, concentrated visits that has allowed me to form some of my strongest memories. Being asked in 유치원/preschool to present in front of a class of kids how the United States is different from Korea, I recall panicking and saying that we aren't forced to eat kimchi in preschool at lunch. A few years later, my grandma taught me how to cast yarn onto knitting needles before letting me contribute a few (incredibly uneven) rows to the scarf she was expertly crafting. It's the city I took my first solo bus, train, and taxi rides in, getting a taste of independence in a big city in a way I could never experience in my hometown in the US.
 
-My most recent visit to Seoul in the summer of 2024 was different from my past visits in many ways. It was my first time visiting since the Covid-19 pandemic and since graduating high school. It was also my first time visitng with entirely my own agenda, and it was followed by a trip to Japan.
+My most recent visit to Seoul in the summer of 2024 was different from my past visits in many ways. It was my first time visiting since the Covid-19 pandemic and since graduating high school. It was also my first time visitng with an agenda crafted entirely without my family, and it was followed by a trip to Japan.
 
 What follows is a loose itinerary listing out some highlights from the three and a half week excursion around the cities of Seoul, Tokyo, and Kyoto.
 
 ### Days 1 - 8 (Seoul, South Korea)
 
 #### Base
-The first week of our travels were based out of Insa-dong (인사동), a lively little neighborhood fairly centrally located in Seoul. It's known for its pedestrian streets full of restaurants, galleys, cafes, and stores, some housed in traditional buildings from the Joseon period. We found it to be a fantastic place to stay due to its proximity to multiple subway lines and its many alleyways to explore in the mornings or evenings before and after our main daily activities.
+The first week of our travels were based out of Insa-dong (인사동), a lively little neighborhood fairly centrally located in Seoul. It's known for its pedestrian streets full of restaurants, gallerys, cafes, and stores, some housed in traditional buildings from the Joseon period. We found it to be a fantastic place to stay due to its proximity to multiple subway lines and its many alleyways to explore in the mornings or evenings before and after our main daily activities.
 
 #### Attractions and Activities
 
@@ -30,7 +30,7 @@ Common tourist activities:
 
 Additional recommendations:
 - [온지심](https://naver.me/x8E6pCm8): A cute bagel cafe in Ikseondong (near Insa-dong) featuring many fun flavors of cream cheese
-- Attending a baseball game. We went to a LG Twins game at Jamsil Stadium, which is conveniently accessed via the 2 Line, but any would do! The energy of the baseball games is wildly different from those in the States and well worth a visit. Slightly different rules also make for longer games -- the one we attended lasted for over five hours -- but the intensity of cheering fans and variety of stadium food would be fascinating to any sports enthusiast. Tickets can be bought at the stadium but we'd recommend arriving early if it's a popular game; we bought tickets ~30 minutes before the first pitch and there weren't many seats left.
+- Attending a baseball game. We went to a LG Twins game at Jamsil Stadium, which is conveniently accessed via the 2 Line, but any would do! The energy of the baseball games is wildly different from those in the States and well worth a visit. Slightly different rules also make for longer games -- the one we attended lasted for over five hours -- but the intensity of cheering fans and variety of stadium food would be fascinating to any sports enthusiast. *(9/2025 edit: the KBO has [implemented a pitch clock rule change](https://www.wbsc.org/en/news/kbo-announce-new-rules-for-the-2025-season), which has shortened games slightly.)* Tickets can be bought at the stadium but we'd recommend arriving early if it's a popular game; we bought tickets ~30 minutes before the first pitch and there weren't many seats left.
 
 -  Running along the Cheonggyecheon Stream on a relatively newly developed pedestrian path. Given Seoul's density, most uninterrupted running paths run along waterways (the Han River being the most popular). Cheonggyecheon is a nearly seven mile long stream that has been converted from sewerage to a concrete expressway to a restored stream and public space. We found it to be a pleasant urban route that stayed noticeably cool, presumably due to the stream and the "sunken" nature situating the stream slightly lower than most city infrastructure.
 <div class="image-container">
