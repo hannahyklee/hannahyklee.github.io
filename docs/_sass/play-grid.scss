@@ -1,0 +1,34 @@
+.gallery {
+  column-count: 2;
+  column-gap: 24px;
+  margin: 32px 0;
+}
+@media (max-width: 700px) {
+  .gallery {
+    column-count: 1;
+  }
+}
+.gallery-item {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 24px;
+  position: relative;
+  break-inside: avoid;
+}
+.gallery-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.gallery-caption {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  padding: 5px;
+  font-size: 1em;
+  font-style: italic;
+  text-align: center;
+  box-sizing: border-box;
+}
