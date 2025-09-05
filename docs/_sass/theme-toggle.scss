@@ -1,0 +1,43 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #616060;
+    --link-color: #a35ffc;
+    --header-color: #616060;
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+    --bg-color: #383838;
+    --text-color: #cbcaca;
+    --link-color: #ceacfb;
+    --header-color: #e1dfdf;
+}
+
+/* Apply variables to common elements */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+a:not(.site-header a){
+  color: var(--link-color) !important;
+}
+
+.site-header, 
+.site-header *{
+  color: var(--header-color) !important;
+// Attempting to change the top line color to match links. Broken
+// border-top: 5px solid var(--link-color); 
+}
+
+.site-nav, .site-nav * {
+  background-color: var(--bg-color) !important;
+  color: var(--header-color) !important;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  align-items: center;
+  color: inherit;
+}

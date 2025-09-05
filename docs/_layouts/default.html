@@ -1,4 +1,15 @@
 <!DOCTYPE html>
+
+<!-- Prevent flashing of theme colors upon page load -->
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+  })();
+</script>
+
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
   {%- include head.html -%}
@@ -61,6 +72,7 @@
 
     {%- include footer.html -%}
 
+    <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
   </body>
   
   {% include analytics.html %}
