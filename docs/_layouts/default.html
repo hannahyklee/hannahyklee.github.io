@@ -41,8 +41,8 @@
 
           // Close only when clicking outside the popup content
           document.getElementById("imagePopup").addEventListener("click", function(event) {
-            let popupContent = document.getElementById("popupContent");
-            if (!popupContent.contains(event.target)) {
+            let popupImage = document.getElementById("popupImage");
+            if (!popupImage.contains(event.target)) {
               closePopup();
             }
           });
