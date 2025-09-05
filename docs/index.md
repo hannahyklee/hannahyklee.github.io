@@ -15,7 +15,7 @@ I'm broadly interested in responsible AI, learning how machine learning systems 
 
 Other long term interests of mine include [running](https://hannahyklee.github.io/running/2025/03/10/years-in-running.html), hiking, reading, and creating art ([often]({{ site.baseurl }}{% link play.md %}) of places I've run in or hiked around!).
 
-This site (attempts to) organize my notes, updates, and miscellaneous digital artifacts. It is very much a work in progress!
+This site attempts to organize my notes, updates, and miscellaneous digital artifacts. It is very much a work in progress!
 
 ___
 <br>
