@@ -4,7 +4,7 @@ title: Play
 permalink: /play/
 ---
 
-I occasionally like to mess around with drawing and with different mediums. It's a creative outlet that puts me into a flow state entirely separate from work while also giving me an excuse to look back on memories. Here's a (clearly unprofessional) glimpse of (nontechnical) things I've had fun creating!
+I occasionally mess around with drawing and with different mediums. It's a creative outlet that puts me into a flow state entirely separate from work while also giving me an excuse to look back on memories. Here's a (clearly unprofessional) glimpse of (nontechnical) things I've had fun creating!
 
 <div class="gallery">
   <div class="gallery-item">
