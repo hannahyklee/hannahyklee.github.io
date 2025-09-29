@@ -2,7 +2,7 @@
 layout: post
 title:  "Open sourcing TrueMedia.org's contributions"
 date:   2025-02-16 22:00:00 -0700
-categories: research truemedia
+categories: research
 ---
 
 You can now find the TrueMedia.org team's contributions on the [TrueMedia.org GitHub](https://github.com/truemediaorg).

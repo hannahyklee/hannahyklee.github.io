@@ -24,7 +24,18 @@ h6 {
 font-size: 1em !important;
 }
 
+/* Force mobile nav to stay on top */
+.site-header {
+  z-index: 999 !important;
+  position: relative;
+}
+
+.site-nav {
+  z-index: 1000 !important;
+}
+
 @import "image-styling";
 @import "strava-visualizations";
 @import "play-grid";
 @import "theme-toggle";
+@import "image-carousel";
