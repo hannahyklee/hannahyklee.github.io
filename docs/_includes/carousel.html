@@ -1,0 +1,13 @@
+<div class="image-carousel-container">
+  <button class="carousel-nav-button carousel-prev">←</button>
+  <div class="image-carousel">
+    {% assign image_files = site.static_files | where_exp: "image", "image.path contains include.directory" %}
+    {% assign sorted_images = image_files | sort: "path" %}
+    {% for image in sorted_images %}
+      <div class="carousel-image-wrapper">
+        <img src="{{ image.path | relative_url }}" alt="{{ image.basename }}" class="carousel-image">
+      </div>
+    {% endfor %}
+  </div>
+  <button class="carousel-nav-button carousel-next">→</button>
+</div>

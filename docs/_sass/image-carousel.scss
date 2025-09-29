@@ -1,0 +1,96 @@
+/* Image Carousel Styles */
+.image-carousel-container {
+  margin: 2rem 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 1;
+}
+
+.image-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 0.25rem;
+  padding: 1rem 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  flex: 1 1 auto;
+}
+
+.image-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-image-wrapper {
+  flex: 0 0 300px;
+  height: 300px;
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  /* Override any existing image styles that might interfere */
+  border-radius: 0 !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.carousel-image:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.carousel-nav-button {
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.carousel-nav-button:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.carousel-nav-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Prevent default image click behavior for carousel images */
+.carousel-image-wrapper img {
+  pointer-events: auto;
+}
+
+/* Override any existing image enlargement behavior for carousel */
+.image-carousel-container img {
+  max-width: none !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .carousel-image-wrapper {
+    flex: 0 0 300px;
+    height: 300px;
+  }
+  
+  .carousel-nav-button {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+  }
+}
