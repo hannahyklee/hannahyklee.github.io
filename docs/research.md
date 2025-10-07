@@ -14,9 +14,9 @@ In 2024, I worked as a researcher at [TrueMedia.org](https://www.truemedia.org),
 Nuria Alina Chandra, Ryan Murtfeldt, Lin Qiu, Arnab Karmakar, **Hannah Lee**, Emmanuel Tanumihardja, Kevin Farhat, Ben Caffee, Sejin Paik, Changyeon Lee, Jongwook Choi, Aerin Kim, Oren Etzioni.  
 *Preprint*, 2025.
 
-**[The Tug-of-War Between Deepfake Generation and Detection](https://arxiv.org/abs/2407.06174).**  
+**[The Tug-of-War Between Deepfake Generation and Detection](https://arxiv.org/abs/2407.06174).**
 **Hannah Lee**, Changyeon Lee, Kevin Farhat, Lin Qiu, Steve Geluso, Aerin Kim, Oren Etzioni.  
-*Data-centric Machine Learning Workshop at the 41st International Conference on Machine Learning*, Vienna, Austria, Jul. 2024.
+*Data-centric Machine Learning Workshop at the 41st International Conference on Machine Learning*, Vienna, Austria, Jul. 2024. [Poster Presentation]({{ site.baseurl }}/assets/research-assets/deepfake-survey-2024-poster.pdf).
 
 <br>
 
@@ -39,4 +39,4 @@ Anas Awadalla, Le Xue, Oscar Lo, Manli Shu, **Hannah Lee**, Etash Kumar Guha, Ma
 *NeurIPS 2024, Datasets and benchmarks track.*
 
 **[Scaling Hardness-Impact Training: Investigating Data Ordering With TinyLlama](https://gitlab.cs.washington.edu/sidlak/cse517-final-project) (course project).**   
-Finetuning leverages pre-trained language models to improve task-specific performance. We build on existing finetuning paradigms and investigate how data hardness affects the overall performance and efficiency of fine-tuning. [Poster Presentation]({{ site.baseurl }}/assets/cse517-poster.pdf).
+Finetuning leverages pre-trained language models to improve task-specific performance. We build on existing finetuning paradigms and investigate how data hardness affects the overall performance and efficiency of fine-tuning. [Poster Presentation]({{ site.baseurl }}/assets/research-assets/cse517-poster.pdf).

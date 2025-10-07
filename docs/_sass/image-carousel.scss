@@ -49,8 +49,8 @@
   background: rgba(0,0,0,0.6);
   color: white;
   border: none;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   cursor: pointer;
   font-size: 18px;
@@ -67,18 +67,6 @@
 .carousel-nav-button:disabled {
   opacity: 0.3;
   cursor: not-allowed;
-}
-
-/* Prevent default image click behavior for carousel images */
-.carousel-image-wrapper img {
-  pointer-events: auto;
-}
-
-/* Override any existing image enlargement behavior for carousel */
-.image-carousel-container img {
-  max-width: none !important;
-  width: 100% !important;
-  height: 100% !important;
 }
 
 /* Mobile responsiveness */
