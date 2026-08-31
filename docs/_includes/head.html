@@ -1,0 +1,27 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- seo -%}
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css">
+  <style>
+    .social-media-list .ai {
+      width: 16px;
+      display: inline-block;
+      padding-right: 5px;
+      vertical-align: text-top;
+      text-align: center;
+      color: #828282;
+      text-decoration: none;
+    }
+    .social-media-list a:hover .ai,
+    .social-media-list a:visited .ai {
+      color: #828282;
+    }
+  </style>
+  {%- feed_meta -%}
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include google-analytics.html -%}
+  {%- endif -%}
+</head>
